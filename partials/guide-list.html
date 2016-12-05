@@ -1,0 +1,25 @@
+		<ul ng-repeat="item in books">
+			
+			<li>{{item.type}}</li>
+			<li>{{item.title}}</li>
+			<li>${{item.price | number:2}}</li>
+			<hr/>
+
+		</ul>
+
+<!-- 
+
+
+
+<div ng-repeat="item in items | filter: searchText.search">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="col-xs-1"><input type="checkbox" name=""/></div>
+      <div class="col-xs-7"><a ng-href="#/items/{{item.id}}">{{item.task}}</a></div>
+      <div class="col-xs-2">{{item.dueDate}}</div>
+      <div class="col-xs-1">{{item.assignedTo}}</div>
+      <div class="col-xs-1"><button class="btn btn-danger">X</button></div>
+    </div>
+  </div>
+</div>
+ -->
