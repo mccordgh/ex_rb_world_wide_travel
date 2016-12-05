@@ -1,28 +1,10 @@
 "use strict";
 
-app.controller('bookCtrl', ($scope) => {
+app.controller('bookCtrl', ($scope, GuideFactory) => {
 
-  $scope.bookItems = [];
-
-  $scope.loadBooks = () => {
-
-    return new Promise((resolve, reject) => {
-      $.ajax({
-        url: '../../data/guides.json',
-        success: (result) => {
-          resolve(result.guides);
-        },
-        error: (error) => {
-          console.log(`ERROR BRO => ${error}`);
-          reject(error);
-        }
-      });
-    });
-  };
-
-  $scope.loadBooks()
+   GuideFactory.loadBooks()
     .then((data) => {
-      $scope.bookItems = data;
+      $scope.books = data;
       $scope.$apply();
     });
 

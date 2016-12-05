@@ -10,11 +10,11 @@
 
 	<div ng-controller="bookCtrl">
 
-		<ul ng-repeat="item in bookItems">
+		<ul ng-repeat="item in books">
 			
 			<li>{{item.type}}</li>
 			<li>{{item.title}}</li>
-			<li>{{item.price}}</li>
+			<li>${{item.price | number:2}}</li>
 			<hr/>
 
 		</ul>
@@ -30,6 +30,7 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 <script src="app/app.js"></script>
+<script src="app/factories/GuideFactory.js"></script>
 <script src="app/controllers/bookCtrl.js"></script>
 </body>
 </html>
