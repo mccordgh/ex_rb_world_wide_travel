@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('bookCtrl', ($scope, GuideFactory) => {
+app.controller('bookCtrl', function($scope, GuideFactory){
 
    GuideFactory.loadBooks()
     .then((data) => {

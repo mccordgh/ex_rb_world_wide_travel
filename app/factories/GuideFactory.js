@@ -25,5 +25,6 @@ app.factory('GuideFactory', function() {
     }
   };
 
+
   return FuncObj;
 });
